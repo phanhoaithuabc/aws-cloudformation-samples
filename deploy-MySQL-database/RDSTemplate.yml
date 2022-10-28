@@ -1,4 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
+
 Parameters:
   EnvironmentName:
     Description: An environment name that will be prefixed to resource names
@@ -9,6 +10,7 @@ Parameters:
   myPassword:
     Description: A password with at least 8 characters
     Type: String  
+
 Resources:
   # Choose a name of your choice
   myDBSubnetGroup11:
@@ -20,6 +22,7 @@ Resources:
       SubnetIds:
       - subnet-045e261987a91fa63
       - subnet-056e13b0a88c48a92
+      
   # Choose a name of your choice    
   MyDB: 
     Type: "AWS::RDS::DBInstance"
@@ -35,7 +38,6 @@ Resources:
       MasterUserPassword: !Sub "${myPassword}"
       DBSubnetGroupName: !Ref myDBSubnetGroup11
       Tags: 
-        - 
-          Key: "Name"
+        - Key: "Name"
           Value: !Sub "${EnvironmentName} MS SQL RDS"
     DeletionPolicy: "Retain"
