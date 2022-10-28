@@ -6,4 +6,6 @@
 ## 2. Simple VPC
 <img src='Simple-VPC/Infra.PNG'>
 
-## 3. 
+## 3. deploy-server-in-pri-subnet
+<img src='deploy-server-in-pri-subnet/infra.png'>
+
